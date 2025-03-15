@@ -5,6 +5,7 @@
     "module": "ESNext",
     "jsx": "react-jsx",
     "strict": true,
+    "allowJs": true,
     "noEmit": true,
     "skipLibCheck": true,
     "isolatedModules": true,
