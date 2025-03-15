@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'), // Папка для сборки
     filename: 'bundle.js', // Имя выходного файла
-    publicPath: '/',
+    publicPath: 'http://localhost:8081/',
   },
   mode: 'development', // Режим разработки (можно переключить на 'production')
   plugins: [

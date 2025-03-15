@@ -45,7 +45,7 @@ module.exports = {
       name: 'app1', // Уникальное имя для текущего приложения
       filename: 'remoteEntry.js', // Файл, который будет содержать информацию о доступных модулях
       exposes: {
-        './TaskTestControl': './src/components/TaskTestControl.js',
+        './TasksTestControl': './src/components/TasksTestControl.js',
       },
       shared: {
         react: { singleton: true, requiredVersion: '^18.0.0' }, // Общие зависимости
