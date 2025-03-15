@@ -1,5 +1,5 @@
 export const mfConfig = {
-  name: "Mesto_sprint_1",
+  name: "host",
   exposes: {},
   shared: ["react", "react-dom"],
 };

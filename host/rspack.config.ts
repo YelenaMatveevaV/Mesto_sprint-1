@@ -28,7 +28,7 @@ export default withZephyr()({
   },
   output: {
     // You need to set a unique value that is not equal to other applications
-    uniqueName: "Mesto_sprint_1",
+    uniqueName: "host",
     // publicPath must be configured if using manifest
     publicPath: "http://localhost:8080/",
   },
