@@ -2,12 +2,11 @@
   "name": "profile-microfrontend",
   "version": "0.0.1",
   "scripts": {
-    "build": "NODE_ENV=production rspack build",
-    "build:dev": "NODE_ENV=development rspack build",
-    "build:start": "cd dist && rspack serve",
-    "start": "cross-env NODE_ENV=development rspack serve"
+    "build": "webpack",
+    "start": "webpack serve"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
     "@rspack/cli": "~1.2.0",
     "@rspack/core": "~1.2.0",
     "@rspack/plugin-react-refresh": "~1.0.1",
@@ -27,9 +26,16 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-typescript": "^7.26.0",
     "@module-federation/enhanced": "^0.8.9",
+    "babel-loader": "^10.0.0",
+    "html-webpack-plugin": "^5.6.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.3.0",
+    "style-loader": "^4.0.0",
     "zephyr-rspack-plugin": "^0.0.32"
   }
 }

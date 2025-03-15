@@ -23,4 +23,7 @@ module.exports = {
     static: './dist', // Папка для сервера разработки
     port: 8080, // Порт сервера
   },
+  exposes: {
+    './UsersTestControl': './src/components/UsersTestControl.js',
+  }, 
 };
