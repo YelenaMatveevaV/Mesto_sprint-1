@@ -1,3 +1,5 @@
-export default function TaskTestControl() {
-    return <div>Это тестовый компонент из проекта Task</div>
-};
+//import React from "react";
+
+export default function TasksTestControl() {
+    return <div>Это тестовый компонент из проекта Task</div>;
+}

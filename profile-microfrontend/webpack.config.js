@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'), // Папка для сборки
     filename: 'bundle.js', // Имя выходного файла
-    publicPath: 'http://localhost:8082/',
+    publicPath: 'http://localhost:8083/',
   },
   mode: 'development', // Режим разработки
   module: {
@@ -48,15 +48,21 @@ module.exports = {
         './TasksTestControl': './src/components/TasksTestControl.js',
       },
       shared: {
-        react: { singleton: true, requiredVersion: '^18.0.0' }, // Общие зависимости
-        'react-dom': { singleton: true, requiredVersion: '^18.0.0' },
+        react: { 
+          singleton: true, 
+          requiredVersion: false //'^18.0.0' 
+        }, // Общие зависимости
+        'react-dom': { 
+          singleton: true, 
+          requiredVersion: false //'^18.0.0' 
+        },
       },
     }),
   ],
 
   devServer: {
     static: path.join(__dirname, 'dist'), // Папка для сервера разработки
-    port: 8082, // Порт сервера
+    port: 8083, // Порт сервера
     historyApiFallback: true,
   },
 

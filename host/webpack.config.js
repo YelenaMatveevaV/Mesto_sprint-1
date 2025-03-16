@@ -1,5 +1,6 @@
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js', // Точка входа
@@ -10,6 +11,9 @@ module.exports = {
   },
   mode: 'development', // Режим разработки (можно переключить на 'production')
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html', // Убедитесь, что файл index.html находится в папке src
+    }),
     new ModuleFederationPlugin({
       name: 'app1', // Уникальное имя для текущего приложения
       filename: 'remoteEntry.js', // Файл, который будет содержать информацию о доступных модулях
@@ -23,7 +27,7 @@ module.exports = {
       },
       remotes: {
         'auth-microfrontend': 'auth-microfrontend@http://localhost:8081/remoteEntry.js',
-        'profile-microfrontend': 'profile-microfrontend@http://localhost:8082/remoteEntry.js',
+        'profile-microfrontend': 'profile-microfrontend@http://localhost:8083/remoteEntry.js',
         },
     }),
   ],
