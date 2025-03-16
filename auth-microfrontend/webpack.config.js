@@ -19,6 +19,12 @@ module.exports = {
       filename: 'remoteEntry.js', // Файл, который будет содержать информацию о доступных модулях
       exposes: {
         './UsersTestControl': './src/components/UsersTestControl.js',
+        './Login': './src/components/Login.js',
+        './EditAvatarPopup': './src/components/EditAvatarPopup.js',
+        './EditProfilePopup': './src/components/EditProfilePopup.js',
+        './InfoTooltip': './src/components/InfoTooltip.js',
+        './PopupWithForm': './src/components/PopupWithForm.js',
+        './Register': './src/components/Register.js',
       },
       shared: {
         react: { singleton: true, requiredVersion: '^18.0.0' }, // Общие зависимости

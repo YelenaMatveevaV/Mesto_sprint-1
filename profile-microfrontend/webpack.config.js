@@ -46,6 +46,10 @@ module.exports = {
       filename: 'remoteEntry.js', // Файл, который будет содержать информацию о доступных модулях
       exposes: {
         './TasksTestControl': './src/components/TasksTestControl.js',
+        './AddPlacePopup': './src/components/AddPlacePopup.js',
+        './Card': './src/components/Card.js',
+        './ImagePopup': './src/components/ImagePopup.js',
+        './PopupWithForm': './src/components/PopupWithForm.js',
       },
       shared: {
         react: { 
