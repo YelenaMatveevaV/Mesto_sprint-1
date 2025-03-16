@@ -3,7 +3,7 @@ import React, { lazy, Suspense, useState, useEffect }   from "react";
 import Main from "./components/Main.js";
 /*
 import { Route, useHistory, Switch } from "react-router-dom";
-import Header from "./components/Header.js";
+import Header from "./components/Header.js";cd 
 import Main from "./components/Main.js";
 import Footer from "./components/Footer.js";
 import PopupWithForm from "./auth-microfrontend/PopupWithForm";
@@ -54,6 +54,10 @@ const UsersTestControl = lazy(() => import('auth-microfrontend/UsersTestControl'
    })
    );
 
+   const Card = lazy(() => import('profile-microfrontend/Card').catch(() => {
+    return { default: () => <div className='error'>Component is not available!</div> };
+   })
+   );
 
   const App = () => {
     const [jwt, setJwt] = useState('');

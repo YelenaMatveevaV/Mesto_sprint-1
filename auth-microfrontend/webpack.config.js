@@ -25,6 +25,7 @@ module.exports = {
         './InfoTooltip': './src/components/InfoTooltip.js',
         './PopupWithForm': './src/components/PopupWithForm.js',
         './Register': './src/components/Register.js',
+        './CurrentUserContext': './src/contexts/CurrentUserContext.js',
       },
       shared: {
         react: { singleton: true, requiredVersion: '^18.0.0' }, // Общие зависимости
@@ -45,6 +46,12 @@ module.exports = {
           },
         },
       },
+
+      {
+        test: /\.svg$/, // Обработка SVG-файлов
+        use: ['@svgr/webpack'], // Преобразует SVG в React-компоненты
+      },
+
       {
         test: /\.css$/, // Если у вас есть CSS-файлы
         use: ['style-loader', 'css-loader'],

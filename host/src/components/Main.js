@@ -1,6 +1,16 @@
 import React from 'react';
-import Card from './profile-microfrontend/Card';
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
+//import Card from './profile-microfrontend/Card';
+//import { CurrentUserContext } from '../contexts/CurrentUserContext';
+
+ const Card = lazy(() => import('profile-microfrontend/Card').catch(() => {
+    return { default: () => <div className='error'>Component is not available!</div> };
+   })
+   );
+
+   const CurrentUserContext = lazy(() => import('auth-microfrontend/CurrentUserContext').catch(() => {
+    return { default: () => <div className='error'>Component is not available!</div> };
+   })
+   );
 
 function Main({ cards, onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike, onCardDelete }) {
   const currentUser = React.useContext(CurrentUserContext);
